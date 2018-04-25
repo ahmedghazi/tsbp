@@ -1,0 +1,89 @@
+article.story{
+	color:blue;
+	//padding: 0px;
+	//margin: 0 10px 10px 0;
+	position: fixed;
+	width: calc(50vw - (( #{$gutter} * 4) - 1px) );
+	@include flexbox();
+
+	.article_inner,
+	.module_rate,
+	.story_inner{background-color: white}
+
+	.article_inner{
+		padding: $marge1;
+		min-width: 100%;
+		.article_header{
+			border-bottom: 1px dashed rgba(0, 0, 255, 0.1);
+			padding-bottom: $marge1;
+			margin-bottom: $marge1;
+			//a{margin-bottom: 5px;}
+			.article_header-top{
+				margin-bottom: $marge1;
+				@include flexbox();
+				@include justify-content(space-between);
+			}
+		}
+		.article_content{
+			border-bottom: 1px dashed rgba(0, 0, 255, 0.1);
+			padding-bottom: $marge1;
+			margin-bottom: $marge1;
+			//white-space: pre;
+			p{margin-bottom: $marge1;}
+			iframe{width: 100%;}
+			img{width: 100%;max-width: 100%;}
+		}
+
+		.article_footer{
+			@include flexbox();
+			@include justify-content(flex-end);
+		}
+	}
+	
+}
+
+
+
+
+// .article_content{white-space: pre}
+// .article_content iframe{width: 100%;}
+// .article_content img{max-width: 100%;}
+// .article_inner{padding: $marge1;margin-right: 10px}
+// .article_header,.article_content,.article_footer{display: inline-block;width: 100%}
+
+// .article_header a{max-width: 80%; margin-bottom: 5px;}
+// .article_footer li{float: left;}
+// .article_footer li:last-child:after{content: "";margin: 0}
+// .module_rate{
+// 	padding: $marge1;
+// 	width: 57px;
+// }
+// .module_rate .btn{text-indent: -9999px}
+// .module_rate .btn:hover,
+// .module_rate .btn:active{opacity: 0.5;}
+
+// .up .btn,.down .btn{
+// 	background-image: url(../img/up-down.png);
+// 	background-repeat: no-repeat;
+// 	width: $marge1;
+// 	height: 12px;
+// 	overflow: hidden;
+// 	display: inline-block;
+// }
+// .down .btn{background-position: 0 -12px;}
+// .reply .up .btn{background-position: -10px 0;}
+// .reply .down .btn{background-position: -10px -12px;}
+
+// .liste .module_rate{margin: 0}
+// .count{text-align: right; float: right;display: inline-block;}
+
+
+// .media_wrapper{
+// 	width: 100%; height: 400px;
+// 	position: relative;
+// 	background-color: black;
+// }
+// .ico_play,
+// .thumbnail{position: absolute;width: 100%; height: 100%}
+
+// .thumbnail{background-position: center; background-repeat: no-repeat;}

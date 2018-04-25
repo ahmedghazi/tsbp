@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        base(href="/")
+        title Contradicts - #{title}
+        block links
+            link(rel='stylesheet', href='/css/style.css')
+        meta(og:title='The Skateboard Poll - #{title}')
+        meta(og:description='A place to debate with evidences')
+
+        block js
+            if ENV_DEVELOPMENT
+                script(src='http://localhost:35729/livereload.js')
+            script(src='/js/vendor/modernizr.min.js')
+
+    body(class="")
+        div#wrapper.hidden
+            header.anime
+                include header
+            block content
+            footer.anime
+                include footer
+        script(src='/javascripts/jquery.min.js')         
+        script(src='/javascripts/Utils.js')
+        script(src='/javascripts/FormUtils.js')
+        script(src='/javascripts/ViewUtils.js')
+        script(src='/javascripts/AjaxUtils.js')
+        script(src='/javascripts/app.js')

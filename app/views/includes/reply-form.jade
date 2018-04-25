@@ -1,0 +1,19 @@
+form(name="reply", action="/api/r", method="post")
+	.reply-header
+		span Reply
+	input(type="hidden", name="reply_to" value="#{story._id}")
+	input(type="hidden", name="type" value="reply")
+	.row
+		.col-md-6
+			input(type="text", name="name" placeholder="Name" value="")
+		.col-md-6
+			input(type="email", name="email" placeholder="Email" value="")
+	.row
+		.col-md-12
+			textarea(name='content', rows=3, cols=30, placeholder="Say something ...")
+	.row
+		.col-md-12
+			input(type="text", name="media" placeholder="Media url (gif or video)")
+	.row
+		.col-md-12
+			input(type="submit", value="reply")

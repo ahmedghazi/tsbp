@@ -1,0 +1,31 @@
+extends layout
+
+prepend content
+        
+    section
+        .row
+            .col-md-6
+                article
+                    div.createbox
+                        form(name="create", action="/api/c", method="post")
+                            .row
+                                .col-md-6
+                                    input(type="text", name="name" placeholder="Name" value="Meda")
+                                .col-md-6
+                                    input(type="email", name="email" placeholder="Email" value="me@da.fr")
+                            .row
+                                .col-md-12
+                                    input(type="text", name="title" placeholder="Title")
+                            
+                            .row
+                                .col-md-12
+                                    textarea(name='content', rows=3, cols=50, placeholder="Say something ...")
+                            .row
+                                .col-md-12
+                                    input(type="text", name="media" placeholder="Media url (pic or video)")
+                            .row
+                                .col-md-12
+                                    input(type="hidden", name="type", value="story")
+                                    input(type="submit", value="create")
+                
+            .col-md-6.hidden-xs

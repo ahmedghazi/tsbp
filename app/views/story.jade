@@ -1,0 +1,51 @@
+extends layout
+
+prepend content
+    
+    section.post
+        //pre #{story}
+        .row
+            .col-md-6
+                article.story(id='#{story._id}', data-vote_up='#{story.vote_up}', data-vote_down='#{story.vote_down}')
+                    div.article_inner
+                        div.article_header
+                            div.article_header-top
+                                a(href='/#{story._id}')
+                                    h2 #{story.title}
+                                span.date #{moment(story.date).format('MM.DD.YY')}
+                            
+                            div.author by #{story.author.name}
+
+                        div.article_content
+                            p !{story.content}
+                            if story.media
+                                img(src="#{story.media.thumbnail}")
+
+                        div.article_footer
+                            ul
+                                li
+                                    a(href='/api/share/#{story._id}') Share
+                                //- li
+                                //-     a(href='/api/u/#{story._id}') Edit
+                                //- li
+                                //-     a(href='/api/d/#{story._id}') Delete
+                
+                    
+
+            .col-md-6
+                div.replies
+                    div.replies_header  
+                        span.align_left #{story.replies.length} Replies
+                        span Vote for the best
+                    
+                    hr
+                        
+                    div(class="replies_liste len-#{story.replies.length}")
+                        include includes/reply-liste
+                    hr
+                    include includes/reply-form
+
+        
+
+
+        

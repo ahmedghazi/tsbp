@@ -1,0 +1,70 @@
+// ::-webkit-input-placeholder { color:blue; }
+// ::-moz-placeholder { color:blue; } /* firefox 19+ */
+// :-ms-input-placeholder { color:blue; } /* ie */
+// input:-moz-placeholder { color:blue; }
+
+form {
+	input,
+	textarea{
+		width: 100%;
+		padding:$marge1;
+		margin-bottom: $marge1;
+		border:0;
+		background-color: white;
+		color: blue;
+		&{
+			color:blue;
+			@include _placeholder {
+				color: blue;
+				font-style: italic;
+			};
+		}
+	}
+	input[type=submit]{
+		background-color: blue;
+		color:white;
+		float: right;
+		max-width: 30%;
+		text-transform: uppercase;
+		&:hover{background-color: transparent;color:blue;border: 1px solid}
+	}
+	
+}
+
+
+.module_rate{
+	padding: $marge1;
+	width: 57px;
+	.up,
+	.down{
+		@include flexbox();
+		@include justify-content(space-evenly);
+		@include align-items(baseline);
+		margin-bottom: $marge1;
+		padding-bottom: $marge1;
+		cursor: pointer;
+	}
+	.up{
+		//border-bottom: 1px dashed rgba(0, 0, 255, 0.1);
+	}
+	// .up .btn{transform: rotate(-90deg) translateY(-2px)}
+	// .down .btn{transform: rotate(90deg)}
+	
+	.btn{
+		display: inline-block;
+		text-align: center;
+		font-size: 2em;
+		&:hover,
+		&:active{opacity: 0.5;}
+	}
+
+	hr{
+		border-bottom: 1px solid $backgroundColor;
+	}
+}
+
+
+hr{
+	margin: $marge1 0;
+	border-bottom: $border;
+}

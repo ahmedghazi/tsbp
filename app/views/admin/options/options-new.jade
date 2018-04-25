@@ -1,0 +1,26 @@
+extends ../layout
+
+    
+prepend content
+
+    section.submit
+        //pre #{user}
+        h3= title 
+        
+        form(name="submit", action="/admin/options/new/", method="POST")
+        
+            div.form-group
+                label(for="key") Key
+                input(type="text", class="form-control", name="meta.key" )
+
+            div.form-group
+                label(for="value") Value
+                input(type="text", class="form-control", name="meta.value" )
+            
+
+            div.form-group
+                input(type="submit", class="btn btn-lg btn-primary btn-block", value="Submit")
+
+        
+        
+            

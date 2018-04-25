@@ -1,0 +1,10 @@
+extends layout
+
+prepend content
+    
+    section.liste
+        each post in posts
+            article.post(id='#{post._id}')
+                a(href='/post/#{post._id}')
+                    div.article_inner
+                        h2 #{post.title}

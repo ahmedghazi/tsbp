@@ -1,0 +1,39 @@
+extends ../layout
+
+
+        
+block content
+
+    h2 
+        span #{title} 
+        a(href="/admin/options/new" class="btn btn-primary") Ajouter
+    hr
+
+    div.clearfix
+   
+    section
+        //pre #{options}
+       
+        table.table.table-striped
+            thead
+                tr.panel.panel-default
+                    
+                    
+                    td Key
+                    td Value
+                    td.text-right Actions
+                    
+            tbody
+            each option in options
+                tr
+                    
+                    td #{option.meta.key}
+                    td #{option.meta.value}
+                    
+                    td.text-right
+                        .btn-group
+                            a(href="/admin/options/edit/#{option._id}" class="btn btn-primary") Edit
+                            a(href="/admin/options/delete/#{option._id}" class="btn btn-danger") Delete
+                    
+                       
+        

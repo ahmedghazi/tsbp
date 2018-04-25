@@ -1,0 +1,12 @@
+footer{
+	position: fixed;
+	bottom:0px;
+	padding: $marge2;
+	background-color: $backgroundColor;
+	width: 100%; left: 0;
+	li{
+		float: right;
+		margin: 0 0 0 1em;
+		&:first-child:after{content:"";margin: 0}
+	}
+}

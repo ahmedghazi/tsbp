@@ -1,0 +1,27 @@
+each reply in story.replies
+	article.reply.anime(id='#{reply._id}', data-vote_up='#{reply.vote_up}', data-vote_down='#{reply.vote_down}')
+		div.reply_inner
+			div.article_header
+				div.article_header-top
+					a(href='/#{reply._id}')
+						h2 #{reply.title}
+					span.date #{moment(reply.date).format('MM.DD.YY')}
+				
+				div.author by #{reply.author.name}
+
+			div.article_content
+				p !{reply.content}
+				if story.media
+					img(src="#{reply.media.thumbnail}")
+
+			
+		
+	
+		div.module_rate(id='rate-#{reply._id}')
+			div.up
+				span.btn ↑
+				span.count #{reply.vote_up} 
+			hr
+			div.down
+				span.btn ↓
+				span.count #{reply.vote_down} 
