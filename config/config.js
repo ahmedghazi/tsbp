@@ -6,28 +6,28 @@ const config = {
   development: {
     root: rootPath,
     app: {
-      name: 'www'
+      name: 'tsbp'
     },
     port: process.env.PORT || 3009,
-    db: 'mongodb://localhost/www-development'
+    db: 'mongodb://localhost/tsbp-development'
   },
 
   test: {
     root: rootPath,
     app: {
-      name: 'www'
+      name: 'tsbp'
     },
     port: process.env.PORT || 3009,
-    db: 'mongodb://localhost/www-test'
+    db: 'mongodb://localhost/tsbp-test'
   },
 
   production: {
     root: rootPath,
     app: {
-      name: 'www'
+      name: 'tsbp'
     },
     port: process.env.PORT || 3009,
-    db: 'mongodb://localhost/www-production'
+    db: 'mongodb://localhost/tsbp-production'
   }
 };
 
